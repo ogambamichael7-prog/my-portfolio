@@ -1,12 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Michael Ogamba | Personal Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- External JavaScript file -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +22,14 @@
 
             <h2 class="logo">Michael.</h2>
 
-            <ul class="nav-links">
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -41,15 +53,20 @@
 
                 <h1>Hi, I'm <span>Michael Ogamba</span></h1>
 
-                <h2>IT Student & Software Developer</h2>
+                <h2>IT Student & Future Developer</h2>
 
                 <p>
-                    I am passionate about technology, programming and
-                    web development. I am currently building my skills
-                    and exploring the world of technology.
+                    I am passionate about technology, programming
+                    and web development. I am currently building
+                    my skills and exploring the world of technology.
                 </p>
 
-                <a href="#contact" class="button">Contact Me</a>
+                <!-- Dynamic Content Button -->
+                <button id="message-btn" class="button">
+                    Click to Know More
+                </button>
+
+                <p id="dynamic-message"></p>
 
             </div>
 
@@ -65,14 +82,14 @@
 
                 <p>
                     I am an IT student with an interest in programming,
-                    databases and web development. I enjoy learning new
-                    technologies and creating projects that help me improve
-                    my technical skills.
+                    databases and web development. I enjoy learning
+                    new technologies and creating projects that help
+                    me improve my technical skills.
                 </p>
 
                 <p>
-                    My goal is to continue developing my skills and become
-                    a successful professional in the technology industry.
+                    My goal is to continue developing my skills and
+                    become a successful professional in technology.
                 </p>
 
             </div>
@@ -89,27 +106,27 @@
 
                 <div class="skill-card">
                     <h3>HTML</h3>
-                    <p>Creating the structure of websites.</p>
+                    <p>Creating website structures.</p>
                 </div>
 
                 <div class="skill-card">
                     <h3>CSS</h3>
-                    <p>Designing and styling web pages.</p>
+                    <p>Designing and styling websites.</p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Python</h3>
-                    <p>Learning programming and problem solving.</p>
+                    <p>Programming and problem solving.</p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Java</h3>
-                    <p>Learning object-oriented programming.</p>
+                    <p>Object-oriented programming.</p>
                 </div>
 
                 <div class="skill-card">
                     <h3>SQL</h3>
-                    <p>Working with databases and data.</p>
+                    <p>Database management.</p>
                 </div>
 
             </div>
@@ -127,16 +144,15 @@
                 <div class="project-card">
                     <h3>Personal Portfolio</h3>
                     <p>
-                        A personal website created using HTML and CSS
-                        to showcase my skills and projects.
+                        A personal website created using HTML and CSS.
                     </p>
                 </div>
 
                 <div class="project-card">
                     <h3>University Resource Management System</h3>
                     <p>
-                        A database project designed to manage university
-                        resources and information.
+                        A database project designed to manage
+                        university resources and information.
                     </p>
                 </div>
 
@@ -158,13 +174,29 @@
 
             <h2 class="section-title">Contact Me</h2>
 
-            <p>
-                Interested in working together or connecting with me?
-            </p>
+            <p>Feel free to send me a message.</p>
 
-            <a href="mailto:your-email@example.com" class="button">
-                Send Me an Email
-            </a>
+            <!-- Contact Form -->
+            <form id="contact-form">
+
+                <input type="text"
+                    id="name"
+                    placeholder="Your Name">
+
+                <input type="email"
+                    id="email"
+                    placeholder="Your Email">
+
+                <textarea id="message"
+                    placeholder="Write your message"></textarea>
+
+                <button type="submit" class="button">
+                    Send Message
+                </button>
+
+                <p id="form-feedback"></p>
+
+            </form>
 
         </section>
 
@@ -175,11 +207,11 @@
     <footer>
 
         <p>
-            &copy; 2026 Michael Ogamba. All Rights Reserved.
+            &copy; <span id="year"></span>
+            Michael Ogamba. All Rights Reserved.
         </p>
 
     </footer>
 
 </body>
-
 </html>

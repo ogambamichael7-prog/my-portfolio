@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: indigo;
+    background-color: Black;
     color: #f8fafc;
     line-height: 1.6;
 }
@@ -290,5 +290,129 @@ footer {
 
     .section {
         padding: 60px 20px;
+    }
+}
+
+/* Hamburger Menu */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* Contact Form */
+
+#contact-form {
+    max-width: 550px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    background-color: #1f2937;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+#contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* Focus Effects */
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #facc15;
+    outline-offset: 4px;
+}
+
+
+/* Form Feedback */
+
+#form-feedback {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#dynamic-message {
+    color: #38bdf8;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* Mobile Navigation */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1f2937;
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .skills-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    #contact-form {
+        width: 100%;
     }
 }
