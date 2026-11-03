@@ -1,4 +1,3 @@
-
 // 1. Interactive Navigation Menu
 
 const menuToggle = document.getElementById("menu-toggle");
@@ -16,7 +15,6 @@ menuToggle.addEventListener("click", function() {
 
 });
 
-
 // Close menu when a navigation link is clicked
 
 const links = document.querySelectorAll(".nav-links a");
@@ -24,8 +22,10 @@ const links = document.querySelectorAll(".nav-links a");
 links.forEach(function(link) {
 
     link.addEventListener("click", function() {
+
         navLinks.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
+
     });
 
 });
@@ -65,16 +65,12 @@ contactForm.addEventListener("submit", function(event) {
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    // Check if fields are empty
-
     if (name === "" || email === "" || message === "") {
 
         feedback.textContent = "Please fill in all fields.";
         feedback.style.color = "red";
 
     }
-
-    // Check email format
 
     else if (!email.includes("@") || !email.includes(".")) {
 
