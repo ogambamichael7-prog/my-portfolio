@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- External JavaScript file -->
+    <!-- External JavaScript -->
     <script src="script.js" defer></script>
 </head>
 
@@ -22,7 +22,7 @@
 
             <h2 class="logo">Michael.</h2>
 
-            <!-- Hamburger Menu Button -->
+            <!-- Hamburger Menu -->
             <button class="menu-toggle" id="menu-toggle"
                 aria-label="Open navigation menu"
                 aria-expanded="false">
@@ -41,32 +41,42 @@
     </header>
 
 
-    <!-- Main Content -->
     <main>
 
         <!-- Home Section -->
         <section id="home" class="hero">
 
-            <div class="hero-content">
+            <div class="hero-container">
 
-                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+                <!-- Profile Picture -->
+                <img src="images/michael.jpg"
+                     alt="Photo of Michael Ogamba"
+                     class="profile-picture">
 
-                <h1>Hi, I'm <span>Michael Ogamba</span></h1>
+                <!-- Introduction -->
+                <div class="hero-content">
 
-                <h2>IT Student & Future Developer</h2>
+                    <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
-                <p>
-                    I am passionate about technology, programming
-                    and web development. I am currently building
-                    my skills and exploring the world of technology.
-                </p>
+                    <h1>
+                        Hi, I'm <span>Michael Ogamba</span>
+                    </h1>
 
-                <!-- Dynamic Content Button -->
-                <button id="message-btn" class="button">
-                    Click to Know More
-                </button>
+                    <h2>IT Student & Future Developer</h2>
 
-                <p id="dynamic-message"></p>
+                    <p>
+                        I am passionate about technology, programming
+                        and web development. I am currently building
+                        my skills and exploring the world of technology.
+                    </p>
+
+                    <button id="message-btn" class="button">
+                        Click to Know More
+                    </button>
+
+                    <p id="dynamic-message"></p>
+
+                </div>
 
             </div>
 
@@ -115,6 +125,11 @@
                 </div>
 
                 <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Adding interactive features to websites.</p>
+                </div>
+
+                <div class="skill-card">
                     <h3>Python</h3>
                     <p>Programming and problem solving.</p>
                 </div>
@@ -144,7 +159,8 @@
                 <div class="project-card">
                     <h3>Personal Portfolio</h3>
                     <p>
-                        A personal website created using HTML and CSS.
+                        A personal website created using
+                        HTML, CSS and JavaScript.
                     </p>
                 </div>
 
@@ -174,20 +190,24 @@
 
             <h2 class="section-title">Contact Me</h2>
 
-            <p>Feel free to send me a message.</p>
+            <p>
+                Feel free to send me a message.
+            </p>
 
-            <!-- Contact Form -->
             <form id="contact-form">
 
-                <input type="text"
+                <input
+                    type="text"
                     id="name"
                     placeholder="Your Name">
 
-                <input type="email"
+                <input
+                    type="email"
                     id="email"
                     placeholder="Your Email">
 
-                <textarea id="message"
+                <textarea
+                    id="message"
                     placeholder="Write your message"></textarea>
 
                 <button type="submit" class="button">
@@ -214,4 +234,6 @@
     </footer>
 
 </body>
+
 </html>
+
